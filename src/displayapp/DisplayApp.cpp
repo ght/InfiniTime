@@ -415,7 +415,7 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
       ReturnApp(Apps::Settings, FullRefreshDirections::Down, TouchEvents::SwipeDown);
       break;
     case Apps::SettingChimes:
-      currentScreen = std::make_unique<Screens::SettingChimes>(this, settingsController);
+      currentScreen = std::make_unique<Screens::SettingChimes>(this, motorController, settingsController);
       ReturnApp(Apps::Settings, FullRefreshDirections::Down, TouchEvents::SwipeDown);
       break;
     case Apps::SettingShakeThreshold:
