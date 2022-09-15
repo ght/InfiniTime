@@ -115,7 +115,7 @@ uint8_t Battery::GetBatteryPercentageFromVoltage(uint16_t voltage) {
     return 100;
   }
 
-  if (voltage <= voltageOffsets[7]) {
+  if (voltage <= voltageOffsets[LINE_SEGMENT_COUNT]) {
     return 0;
   }
 
